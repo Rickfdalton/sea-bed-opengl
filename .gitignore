@@ -1,0 +1,7 @@
+# Visual Studio temporary files
+*.opendb
+*.suo
+*.user
+*.VC.db
+bin/
+obj/
