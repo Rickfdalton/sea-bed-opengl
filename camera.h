@@ -103,7 +103,7 @@ private:
 		front.y = sin(glm::radians(pitch));
 		front.z = cos(glm::radians(pitch)) * sin(glm::radians(yaw));
 		cam_front_v = glm::normalize(front);
-
+		  
 		cam_right_v = glm::normalize(glm::cross(cam_front_v, world_up_v));
 		cam_up_v = glm::normalize(glm::cross(cam_right_v, cam_front_v));
 

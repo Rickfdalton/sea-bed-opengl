@@ -39,5 +39,6 @@
   <ItemGroup>
     <None Include="shader.vs" />
     <None Include="shader.fs" />
+    <None Include=".gitignore" />
   </ItemGroup>
 </Project>

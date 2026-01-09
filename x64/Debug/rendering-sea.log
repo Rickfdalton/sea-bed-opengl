@@ -8,9 +8,12 @@ C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(33,13): warning C4244: '
 C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(38,30): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(134,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(136,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(137,29): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(138,29): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(220,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(239,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(240,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(137,30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(138,30): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(224,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(243,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(244,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(256,42): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Pc\source\repos\rendering-sea\main_program.cpp(257,42): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   rendering-sea.vcxproj -> C:\Users\Pc\source\repos\rendering-sea\x64\Debug\rendering-sea.exe

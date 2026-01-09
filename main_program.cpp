@@ -100,8 +100,8 @@ int main()
     //stbi_set_flip_vertically_on_load(true);
 
     int width, height, nrChannels;
-    unsigned char* data = stbi_load("C:/Users/Pc/Pictures/Capture.PNG", &width, &height, &nrChannels, 0);
-
+    unsigned char* data = stbi_load("C:/Users/Pc/Downloads/closeup-pool-water-texture.jpg", &width, &height, &nrChannels, 0);
+    //unsigned char* data = stbi_load("C:/Users/Pc/Pictures/Capture.PNG", &width, &height, &nrChannels, 0);
 
     unsigned int texture1;
     glGenTextures(1, &texture1);
@@ -134,24 +134,28 @@ int main()
             vertices[idx] = x-5;idx++;
             vertices[idx] = 0;idx++;
             vertices[idx] = z-5;idx++;
-            vertices[idx] = x;idx++;
-            vertices[idx] = z;idx++;
+            vertices[idx] = x/5.0;idx++;
+            vertices[idx] = z/5.0;idx++;
         }
     }
 
     int i_1 = 1; 
 
     idx = 0;
-    /*
+    
     while (i_1 <= 109) {
-        indices[idx] = i_1;idx++;
-        indices[idx] = i_1-1;idx++;
-        indices[idx] = i_1+11;idx++;
-        indices[idx] = i_1+11;idx++;
-        indices[idx] = i_1 + 12;idx++;
-        indices[idx] = i_1 ;idx++;
+        if (i_1 % 11 != 0) {
+            indices[idx++] = i_1;
+            indices[idx++] = i_1 - 1;
+            indices[idx++] = i_1 + 10;
+            indices[idx++] = i_1 + 10;
+            indices[idx++] = i_1 + 11;
+            indices[idx++] = i_1;
+        }
         i_1++;
-    }*/
+    }
+
+    /*
     for (int z = 0; z < 10; z++) {
         for (int x = 0; x < 10; x++) {
             int topLeft = z * 11 + x;
@@ -170,7 +174,7 @@ int main()
             indices[idx++] = bottomRight;
         }
     }
-    
+    */
     Shader ourShader("C:/Users/Pc/source/repos/rendering-sea/shader.vs", "C:/Users/Pc/source/repos/rendering-sea/shader.fs");
 
 
@@ -248,6 +252,9 @@ int main()
 
         int projectionLoc = glGetUniformLocation(ourShader.ID, "projection");
         glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
+
+        ourShader.setFloat("sin_pos", sin(2*glfwGetTime()));
+        ourShader.setFloat("cos_pos", cos(glfwGetTime()));
 
         
         model = glm::mat4(1.0f);
